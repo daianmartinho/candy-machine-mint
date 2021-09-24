@@ -1,5 +1,4 @@
 import React from 'react';
-import Wallet from '../Wallet';
 import {
   SidebarContainer,
   Icon,
@@ -7,7 +6,6 @@ import {
   SidebarWrapper,
   SidebarMenu,
   SidebarLinks,
-  SidebarBtnWrap,
 } from './SidebarElements';
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -19,14 +17,11 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLinks to='mint'>Mint</SidebarLinks>
-          <SidebarLinks to='about'>About</SidebarLinks>
-          <SidebarLinks to='gallery'>Gallery</SidebarLinks>
-          <SidebarLinks to='trade'>Trade</SidebarLinks>
+          <SidebarLinks to='mint' onClick={toggle}>Mint</SidebarLinks>
+          <SidebarLinks to='about' onClick={toggle}>About</SidebarLinks>
+          <SidebarLinks to='gallery' onClick={toggle}>Gallery</SidebarLinks>
+          <SidebarLinks to='trade' onClick={toggle}>Trade</SidebarLinks>
         </SidebarMenu>
-        <SidebarBtnWrap>
-          <Wallet />
-        </SidebarBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
   )
