@@ -4,6 +4,7 @@ import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import {
   getPhantomWallet,
+  getMathWallet,
   getSlopeWallet,
   getSolflareWallet,
   getSolletWallet,
@@ -24,6 +25,7 @@ const Wallet = () => {
   const wallets = useMemo(
     () => [
         getPhantomWallet(),
+        getMathWallet(),
         getSlopeWallet(),
         getSolflareWallet(),
         getSolletWallet({ network }),
