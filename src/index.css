@@ -5,11 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #303030;
-  color: #FFFFFF;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.font-shadows {
+  font-family: 'Shadows Into Light', cursive;
 }

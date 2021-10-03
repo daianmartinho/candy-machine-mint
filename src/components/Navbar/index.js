@@ -8,10 +8,9 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  NavBtn
+  NavBtn,
+  ConnectButton
 } from './NavbarElements'
-
-import Wallet from '../Wallet';
 
 const Navbar = ({ toggle }) => {
 
@@ -19,11 +18,11 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to='/'>Funky Stickers</NavLogo>
+          <NavLogo to='/'/>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
-          <NavMenu>
+          <NavMenu className="font-shadows">
             <NavItem>
               <NavLinks to='mint'>Mint</NavLinks>
             </NavItem>
@@ -38,7 +37,7 @@ const Navbar = ({ toggle }) => {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <Wallet />
+            <ConnectButton/>
           </NavBtn>
         </NavbarContainer>
       </Nav>

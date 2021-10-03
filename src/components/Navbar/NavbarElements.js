@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
+import LogoImage from '../../images/logo.png'
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 export const Nav = styled.nav`
-  background: #000;
+  background: #0000;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 2rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -29,20 +31,23 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: #fff;
+  color: #000;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   margin-left: 24px;
-  font-weight: bold;
-  text-decoration: none;
+  width: 156px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(${LogoImage});
 `;
 
 export const MobileIcon = styled.div`
   display: none;
-
+  color: #000;
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
@@ -60,8 +65,9 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   margin-right: -22px;
+  padding-left: 0px;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 790px) {
     display: none;
   }
 `;
@@ -71,7 +77,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-  color: #fff;
+  color: #000;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -82,10 +88,24 @@ export const NavLinks = styled(LinkS)`
   &.active {
     border-bottom: 3px solid #01bf71;
   }
+  &:hover {
+    color: #01bf71;
+    transition: 0.1s ease-in-out;
+  }
 `;
 
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 80px;
+`;
+
+export const ConnectButton = styled(WalletMultiButton)`
+  @media screen and (max-width: 405px) {
+    display: inherit;
+    width: 80px;
+    line-height: 25px;
+    padding: 3px 8px;
+    font-size: 12px;
+  }
 `;
